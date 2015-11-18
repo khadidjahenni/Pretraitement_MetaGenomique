@@ -1,0 +1,28 @@
+<tool id="PreMeta" name="PreMeta" version="0.1.0">
+    <requirements>
+       <requirement type="package" version="1.0">premeta</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command><![CDATA[java -cp $__tool_directory__ MetaGenomic $input && mv presMeta.data $output
+
+    ]]></command>
+    <inputs>
+        <param name="input" type="data" format="fasta"/>
+    </inputs>
+    <outputs>
+        <data name="output" format="txt"/>
+    </outputs>
+    <tests>
+        <test>
+            <param name="input" value="seqs500.fasta"/>
+            <output name="output" file="seqs500_presMeta.data"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+     ceci est une aide
+    ]]></help>
+    <citations>
+    </citations>
+</tool>

@@ -192,7 +192,7 @@ public class MetaGenomic {
             System.out.println();
         }
        */
-        String outputfile=file_name.substring(0, file_name.indexOf('.'))+"_presMeta.data";//ùùùùùùùùùùùùùù je reviens sur ça
+        String outputfile="presMeta.data";//ùùùùùùùùùùùùùù je reviens sur ça
         
         File file=new File(outputfile);
         Writer output = new BufferedWriter(new FileWriter(file));
